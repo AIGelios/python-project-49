@@ -1,14 +1,15 @@
+# Makefile
 install: # installation
-    poetry install
+	poetry install
 
 brain-games: # running
-    poetry run brain-games
+	poetry run brain-games
 
 build: # making build
-    poetry build
+	poetry build
 
 publish: # 'publishing' with dry run
-    poetry publish --dry-run
+	poetry publish --dry-run
 
 package-install: # installing package into user's directory
-    python3 -m pip install --user dist/*.whl
+	python3 -m pip install --user dist/*.whl

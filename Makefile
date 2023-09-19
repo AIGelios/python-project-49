@@ -13,3 +13,6 @@ publish: # 'publishing' with dry run
 
 package-install: # installing package into user's directory
 	python3 -m pip install --user dist/*.whl
+
+package-reinstall: # force reinstalling into user,s directory
+	python3 -m pip install --user dist/*.whl --force-reinstall

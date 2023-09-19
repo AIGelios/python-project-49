@@ -1,6 +1,6 @@
 #!/usr/bin/env
-import prompt
-import brain_games.cli as cli
+from brain_games.cli import welcome_user
+
 
 def main():
     print('''
@@ -16,10 +16,11 @@ def main():
 |     (_-  _  ~_-~~~~`,  ,' )	  |
 |       `~ -^(    __;-,((()))	  |
 |             ~~~~ {_ -_(())	  |
-|                    `\  }	  |
+|                    `\\  }	  |
 -----------------------------------
 ''')
-    cli.welcome_user()
+    welcome_user()
+
 
 if __name__ == '__main__':
     main()

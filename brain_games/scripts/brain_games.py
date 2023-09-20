@@ -1,25 +1,15 @@
 #!/usr/bin/env
-from brain_games.cli import welcome_user
+import brain_games.cli as cli
+
+
+def welcome_to_the_game():
+    print('Welcome to the Brain Games!')
 
 
 def main():
-    print('''
------------------------------------
-|   Welcome to the Brain Games!   |
-| Добро пожаловать в Игры Разума! |
------------------------------------
-|           _---~~(~~-_.	  |
-|         _{  BRAIN )   )	  |
-|       ,   ) -~~- ( ,-' )_	  |
-|      (  `-,_..`., )-- '_,)	  |
-|     ( ` _)  (  -~( -_ `,  }	  |
-|     (_-  _  ~_-~~~~`,  ,' )	  |
-|       `~ -^(    __;-,((()))	  |
-|             ~~~~ {_ -_(())	  |
-|                    `\\  }	  |
------------------------------------
-''')
-    welcome_user()
+    welcome_to_the_game()
+    user = cli.username()
+    cli.welcome_user(user)
 
 
 if __name__ == '__main__':

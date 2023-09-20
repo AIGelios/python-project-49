@@ -1,0 +1,40 @@
+#!/usr/bin/env
+# game "Even or odd?"
+from random import randint
+
+user = username()
+
+def is_even(num: int) -> bool:
+    "returns True if num is even and False if num is odd"
+    return num % 2 == 0
+
+
+def main():
+    '''"Even or odd?" main script'''
+    print('GAME: Answer "yes" if the number is even, otherwise answer "no".')
+    available_answers = {'yes': True, 'no': False}
+    correct_answers = 0
+    while correct_answers < 3:
+        hidden_num = randint(0, 99)
+        print(f'GAME: Question: {hidden_num}')
+        answer = input(f'{user}: ').lower()
+        if answer in available_answers:
+            if available_answers[answer] == is_even(hidden_num):
+                print('GAME: Correct!')
+                correct_answers += 1
+            else:
+                good = 'no' if (answer == 'yes') else 'yes'
+                part1 = f"GAME: '{answer}' is wrong answer ;(. "
+                part2 = f"Correct answer was '{good}'."
+                print(part1 + part2)
+                print(f"Let's try again, {user}!")
+                break
+        else:
+            print("GAME: Answer should be only 'yes' or 'no'")
+            continue
+    else:
+        print(f'GAME: Congratulations, {user}!')
+
+
+if __name__ == '__main__':
+    main()

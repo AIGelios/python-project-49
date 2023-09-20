@@ -2,12 +2,12 @@
 import brain_games.cli as cli
 
 
-def welcome_to_the_game():
+def welcome():
     print('Welcome to the Brain Games!')
 
 
 def main():
-    welcome_to_the_game()
+    welcome()
     user = cli.username()
     cli.welcome_user(user)
 

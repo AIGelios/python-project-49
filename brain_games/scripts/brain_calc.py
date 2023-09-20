@@ -1,6 +1,6 @@
 #!/usr/bin/env
 import brain_games.shell as shell
-import brain_games.games.even as game
+import brain_games.games.calc as game
 
 
 def main():

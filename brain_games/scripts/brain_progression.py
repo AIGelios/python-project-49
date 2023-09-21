@@ -1,10 +1,11 @@
 #!/usr/bin/env
-import brain_games.shell as shell
+from brain_games.shell import game_shell as run
 import brain_games.games.progression as game
 
 
 def main():
-    shell.game_shell(game)
+    '''Run the game "Find missed number in the progression"'''
+    run(game)
 
 
 if __name__ == '__main__':

@@ -5,19 +5,29 @@ import brain_games.cli as cli
 
 
 def game_shell(game_module):
+    '''takes the game resources module and runs the game'''
+
     start.welcome()
+
     user = cli.username()
     cli.welcome_user(user)
+
     print(game_module.description)
+
+    # the required number of correct answers:
     answers_to_complete = 3
+
     while answers_to_complete != 0:
         question = game_module.generate_question()
         print(f'Question: {question}')
+
         correct_answer = game_module.correct_answer(question)
         user_answer = input('Your answer: ')
+
         if user_answer == correct_answer:
             answers_to_complete -= 1
             print('Correct!')
+
         else:
             print(f"'{user_answer}' is wrong answer ;(.", end=' ')
             print(f"Correct answer was '{correct_answer}'.")

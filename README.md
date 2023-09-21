@@ -9,3 +9,6 @@ https://asciinema.org/a/1XuFWc3qHb0PVlz2L9FYYWxJv
 
 ### ASCIInema of brain-gcd game:
 https://asciinema.org/a/LBFU4dcDVqI22qy27hg8jKSZX
+
+### ASCIInema of brain-progression game:
+https://asciinema.org/a/AFb1JTc9wYgMQoo22lZ9UsctS

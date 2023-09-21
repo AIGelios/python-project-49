@@ -1,0 +1,6 @@
+# ignoring VENV components:
+/.venv/
+
+
+# ignoring python cash files:
+__pycache__/

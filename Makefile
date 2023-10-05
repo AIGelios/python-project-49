@@ -20,5 +20,11 @@ package-uninstall: # removing installed packet from system
 package-reinstall: # force reinstalling into user,s directory
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
+update: # total maintenance
+	poetry install
+	poetry build
+	poetry publish --dry-run
+	python3 -m pip install --user dist/*.whl --force-reinstall
+
 lint: # lint project with flake8
 	poetry run flake8 brain_games

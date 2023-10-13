@@ -1,30 +1,41 @@
-# Makefile
-install: # installation
+install:
 	poetry install
 
-brain-games: # running
-	poetry run brain-games
+test:
+	poetry run pytest
 
-build: # making build
+test-coverage:
+	poetry run pytest --cov=brain-games --cov-report xml
+
+lint:
+	poetry run flake8 brain-games
+
+selfcheck:
+	poetry check
+
+check:
+	selfcheck
+	test
+	lint
+
+build:
+	check
 	poetry build
 
-publish: # 'publishing' with dry run
+publish:
 	poetry publish --dry-run
 
-package-install: # installing package into user's directory
+package-install:
 	python3 -m pip install --user dist/*.whl
 
-package-uninstall: # removing installed packet from system
+package-uninstall:
 	python3 -m pip uninstall hexlet-code
 
-package-reinstall: # force reinstalling into user,s directory
+package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
-update: # total maintenance
+update:
 	poetry install
 	poetry build
 	poetry publish --dry-run
 	python3 -m pip install --user dist/*.whl --force-reinstall
-
-lint: # lint project with flake8
-	poetry run flake8 brain_games

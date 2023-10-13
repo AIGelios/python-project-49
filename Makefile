@@ -5,7 +5,7 @@ test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=brain-games --cov-report xml
+	poetry run pytest --cov=brain_games --cov-report xml
 
 lint:
 	poetry run flake8 brain-games

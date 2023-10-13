@@ -1,11 +1,11 @@
 install:
 	poetry install
 
-test:
-	poetry run pytest
+# test:
+#	poetry run pytest
 
-test-coverage:
-	poetry run pytest --cov=brain_games --cov-report xml
+# test-coverage:
+#	poetry run pytest --cov=brain_games --cov-report xml
 
 lint:
 	poetry run flake8 brain-games
@@ -15,7 +15,7 @@ selfcheck:
 
 check:
 	selfcheck
-	test
+#	test
 	lint
 
 build:

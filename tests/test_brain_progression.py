@@ -7,7 +7,7 @@ def test_brain_progression():
     for _ in range(3):
         data = generate_question()
         assert isinstance(data, str)
-        assert 5 <= len(data.split()) <= 10 
+        assert 5 <= len(data.split()) <= 10
         assert '..' in data
         assert '..' in data.split()
         assert data.count(' ') == len(data.split()) - 1

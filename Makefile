@@ -1,25 +1,22 @@
 install:
 	poetry install
 
-# test:
-#	poetry run pytest
+test:
+	poetry run pytest .
 
-# test-coverage:
-#	poetry run pytest --cov=brain_games --cov-report xml
+coverage:
+	poetry run pytest --cov=brain_games --cov-report xml
 
 lint:
-	poetry run flake8 brain-games
+	poetry run flake8 brain_games
 
 selfcheck:
 	poetry check
 
-check:
-	selfcheck
-#	test
-	lint
+check: selfcheck test lint
 
 build:
-	check
+	make check
 	poetry build
 
 publish:
@@ -34,8 +31,4 @@ package-uninstall:
 package-reinstall:
 	python3 -m pip install --user dist/*.whl --force-reinstall
 
-update:
-	poetry install
-	poetry build
-	poetry publish --dry-run
-	python3 -m pip install --user dist/*.whl --force-reinstall
+update: install build publish package-reinstall

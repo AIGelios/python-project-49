@@ -20,7 +20,7 @@ def generate_question() -> str:
     return str(randint(1, 99))
 
 
-def correct_answer(question: int) -> str:
+def get_correct_answer(question: int) -> str:
     '''Take integer number as a string and return "yes"
     if number is prime or "no" if not'''
     return 'yes' if is_prime(int(question)) else 'no'

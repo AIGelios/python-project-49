@@ -1,42 +1,33 @@
 #!/usr/bin/env
-import brain_games.cli as cli
-from brain_games.shell import game_shell as run
-
-import brain_games.games.brain_even as brain_even
-import brain_games.games.brain_gcd as brain_gcd
-import brain_games.games.brain_calc as brain_calc
-import brain_games.games.brain_prime as brain_prime
-import brain_games.games.brain_progression as brain_prog
-
-
-def welcome():
-    print('Welcome to the Brain Games!')
+from brain_games.cli import greet_and_get_name
+from brain_games.shell import run_game
+from brain_games.games import (
+    brain_even, brain_calc, brain_gcd, brain_progression, brain_prime,
+)
 
 
 def main():
-    welcome()
-    user = cli.username()
-    cli.welcome_user(user)
+    greet_and_get_name()
 
 
 def play_even():
-    run(brain_even)
+    run_game(brain_even)
 
 
 def play_prime():
-    run(brain_prime)
+    run_game(brain_prime)
 
 
 def play_calc():
-    run(brain_calc)
+    run_game(brain_calc)
 
 
 def play_gcd():
-    run(brain_gcd)
+    run_game(brain_gcd)
 
 
-def play_prog():
-    run(brain_prog)
+def play_progression():
+    run_game(brain_progression)
 
 
 if __name__ == '__main__':

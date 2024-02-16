@@ -1,37 +1,28 @@
 # game engine module
 
-import brain_games.scripts.brain_games as start
-import brain_games.cli as cli
+from brain_games.cli import greet_and_get_name, say_well_done, say_game_over
 
 
-def game_shell(game_module):
-    '''takes the game resources module and runs the game'''
+ANSWERS_TO_COMPLETE = 3
 
-    start.welcome()
 
-    user = cli.username()
-    cli.welcome_user(user)
-
+def run_game(game_module) -> None:
+    '''Take the game resources module and run the game'''
+    user = greet_and_get_name()
     print(game_module.description)
-
-    # the required number of correct answers:
-    answers_to_complete = 3
-
-    while answers_to_complete != 0:
+    answers_left = ANSWERS_TO_COMPLETE  # the required number of correct answers
+    while answers_left > 0:
         question = game_module.generate_question()
         print(f'Question: {question}')
-
-        correct_answer = game_module.correct_answer(question)
+        correct_answer = game_module.get_correct_answer(question)
         user_answer = input('Your answer: ')
-
         if user_answer == correct_answer:
-            answers_to_complete -= 1
+            answers_left -= 1
             print('Correct!')
-
         else:
             print(f"'{user_answer}' is wrong answer ;(.", end=' ')
             print(f"Correct answer was '{correct_answer}'.")
-            cli.game_over(user)
+            say_game_over(user)
             break
     else:
-        cli.well_done(user)
+        say_well_done(user)

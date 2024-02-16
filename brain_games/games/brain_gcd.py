@@ -13,7 +13,7 @@ def generate_question() -> str:
     return f'{num_1} {num_2}'
 
 
-def correct_answer(question):
+def get_correct_answer(question):
     '''Take two integers as a string and return their
     greatest common divisor as a string object'''
     num_1, num_2 = map(int, question.split())

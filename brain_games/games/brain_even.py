@@ -11,7 +11,7 @@ def generate_question() -> str:
     return str(randint(1, 100))
 
 
-def correct_answer(question: str) -> str:
+def get_correct_answer(question: str) -> str:
     '''Take integer number as a string and return 'yes' if
     the number is even or 'no' if odd'''
     return 'no' if int(question) % 2 else 'yes'

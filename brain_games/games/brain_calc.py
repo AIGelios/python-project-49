@@ -17,10 +17,10 @@ def generate_question() -> str:
     return f'{num_1} {operation} {num_2}'
 
 
-def correct_answer(question: str) -> str:
+def get_correct_answer(question: str) -> str:
     '''Take an arithmetic operation as a string and return
     the right solution as a string object'''
     num_1, op, num_2 = question.split()
     num_1, num_2 = int(num_1), int(num_2)
-    operation = operators[op]
-    return f'{operation(num_1, num_2)}'
+    result = operators[op](num_1, num_2)
+    return str(result)

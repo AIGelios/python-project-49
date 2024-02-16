@@ -14,7 +14,7 @@ def generate_question() -> str:
     return ' '.join(str(x) for x in progression)
 
 
-def correct_answer(question: str) -> str:
+def get_correct_answer(question: str) -> str:
     '''Take ariphmetic progression of integer numbers splitted by
     spaces, find and return the lost number as a string object'''
     q = question.split()  # q - question as list

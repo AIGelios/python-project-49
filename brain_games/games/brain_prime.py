@@ -8,6 +8,8 @@ description = 'Answer "yes" if given number is prime. Otherwise answer "no".'
 def is_prime(number: int) -> bool:
     '''Take integer number and return True
     if number is prime, otherwise False'''
+    if number == 1:
+        return False
     for i in range(2, int(number // 2) + 1):
         if number % i == 0:
             return False

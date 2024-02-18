@@ -1,5 +1,5 @@
 # BRAIN GAMES
-A small console games to train your brain in math
+A small console games to practice in mathematics.
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/AIGelios/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/AIGelios/python-project-49/actions)
@@ -10,12 +10,17 @@ A small console games to train your brain in math
 ```
 make package-install
 ```
-### ASCIInemas of package installation and all games:
+## ASCIInemas of package installation and all games:
 #### installation:
+[![asciicast](https://asciinema.org/a/641320.svg)](https://asciinema.org/a/641320)
 #### brain-even:
+
 #### brain-calc:
+
 #### brain-gcd:
+
 #### brain-progression:
+
 #### brain-prime:
 
 ### Uninstall:

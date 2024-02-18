@@ -18,3 +18,7 @@ def say_game_over(user: str) -> str:
 def say_well_done(user: str) -> str:
     "Say goodbye to user when all answers was correct"
     print(f"Congratulations, {user}!")
+
+
+def get_user_answer():
+    return input('Your answer: ')

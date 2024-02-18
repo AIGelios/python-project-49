@@ -1,5 +1,6 @@
 import brain_games.cli
 
+
 def greet_and_get_name():
     print('Welcome to the Brain Games!')
     print('May I have your name? Testuser')

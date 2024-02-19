@@ -1,5 +1,5 @@
 #!/usr/bin/env
-from brain_games.cli import greet_and_get_name
+from brain_games.cli import welcome_user
 from brain_games.shell import run_game
 from brain_games.games import (
     brain_even, brain_calc, brain_gcd, brain_progression, brain_prime,
@@ -7,7 +7,7 @@ from brain_games.games import (
 
 
 def main():
-    greet_and_get_name()
+    welcome_user()
 
 
 if __name__ == '__main__':

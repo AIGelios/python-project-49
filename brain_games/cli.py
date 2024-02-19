@@ -2,7 +2,7 @@
 import prompt
 
 
-def greet_and_get_name() -> str:
+def welcome_user() -> str:
     "Greet user, ask his/her name and return it"
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')

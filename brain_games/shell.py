@@ -8,7 +8,7 @@ ANSWERS_TO_COMPLETE = 3
 
 def run_game(game_module, cli_module=brain_games.cli) -> None:
     '''Take the game resources module and run the game'''
-    user = cli_module.greet_and_get_name()
+    user = cli_module.welcome_user()
     print(game_module.DESCRIPTION)
     answers_left = ANSWERS_TO_COMPLETE  # the required number of correct answers
     while answers_left > 0:

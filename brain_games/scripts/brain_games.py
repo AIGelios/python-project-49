@@ -28,7 +28,7 @@ def play_brain_gcd():
 
 def play_brain_progression():
     run_game(brain_progression)
-    
-    
+
+
 def play_brain_prime():
     run_game(brain_prime)

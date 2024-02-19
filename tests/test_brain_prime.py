@@ -1,5 +1,5 @@
 from brain_games.games.brain_prime import (
-    generate_question, get_correct_answer, is_prime,
+    generate_question, get_correct_answer,
 )
 
 
@@ -9,15 +9,7 @@ def test_brain_prime():
         assert isinstance(data, str)
         assert data.isdigit()
 
-    for n in ('6', '22', '95'):
+    for n in ('1', '6', '22', '95'):
         assert get_correct_answer(n) == 'no'
     for n in ('3', '17', '41'):
         assert get_correct_answer(n) == 'yes'
-
-
-def test_is_prime():
-    assert not is_prime(1)
-    assert not is_prime(6)
-    assert is_prime(2)
-    assert is_prime(3)
-    assert is_prime(17)

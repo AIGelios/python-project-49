@@ -1,4 +1,4 @@
-description = 'Description'
+DESCRIPTION = 'Description'
 
 
 def generate_question():

@@ -21,4 +21,5 @@ def say_well_done(user: str) -> str:
 
 
 def get_user_answer():
+    "Ask user to input answer to the question"
     return input('Your answer: ')

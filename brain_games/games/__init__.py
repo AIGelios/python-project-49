@@ -1,3 +1,5 @@
+# Games facade
+
 import brain_games.games.brain_even
 import brain_games.games.brain_calc
 import brain_games.games.brain_gcd
